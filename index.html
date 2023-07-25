@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harcama Motoru</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/hesap.webp" type="image/x-icon">
+</head>
+<body>
+
+<div class="container">
+  <!-- karşılama metni -->
+  <h3 class="greet">
+    Hoşgeldin,
+    <input type="text" id="user-input" placeholder="İsminizi giriniz...">
+  </h3>
+
+  <!-- form alanı -->
+  <form>
+    <!-- form üst kısım -->
+    <div class="double">
+      <div class="form-field">
+        <label>Harcama:</label>
+        <input id="name-input" type="text">
+      </div>
+      <div class="form-field">
+        <label>Fiyat:</label>
+        <input id="price-input" type="number">
+      </div>
+    </div>
+    <!-- form alt kısım -->
+    <div class="double">
+      <div class="form-check-field">
+        <input id="status-check" type="checkbox">
+        <label for="status-check">Ödendi</label>
+      </div>
+
+      <button type="submit" id="add-btn">Ekle</button>
+    </div>
+  </form>
+
+  <!-- toplam alanı -->
+  <div class="sum">
+    Toplam Harcama: <span id="sum-info">0</span> &#x20BA;
+  </div>
+  <!-- FLİTRELEME ALANI -->
+  <select id="filter-select">
+    <option value="all">Hepsi</option>
+    <option value="payed">Ödenenler</option>
+    <option value="not-payed">Ödenmeyenler</option>
+  </select>
+  <!-- harcamalar listesi -->
+  <div id="list"></div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
